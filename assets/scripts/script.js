@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   restartButton.addEventListener("click", resetGame);
 
+  restartButton.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    document.body.classList.toggle("pink-mode");
+  });
+
   function startTimer() {
     timerInterval = setInterval(() => {
       time++;
