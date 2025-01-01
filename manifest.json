@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Minesweeper",
+    "version": "1.0",
+    "description": "Remember the classic Minesweeper? Is a logic puzzle video game generally played on personal computers. The game features a grid of clickable tiles, with hidden mines scattered throughout. Your goal is to uncover all the safe tiles without triggering a mine. The more you clear, the closer you get to victory, but one wrong click could end it all. Can you clear the grid and avoid the explosions? Let's find out!",
+    "icons": {
+      "16": "assets/img/mine.png",
+      "48": "assets/img/mine.png",
+      "128": "assets/img/mine.png"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "assets/img/mine.png"
+    },
+    "permissions": []
+  }
+  
