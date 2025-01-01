@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("timer").textContent = "000";
     document.getElementById("mines-count").textContent = "010";
     document.getElementById("restart").className = "";
-    document.getElementById("restart").style.backgroundImage = "url('assets/img/smile.png')";
     clearInterval(timerInterval);
     startTimer();
     createBoard();
