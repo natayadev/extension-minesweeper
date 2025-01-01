@@ -86,16 +86,16 @@ body {
 }
 
 .cell.mine {
-  background: url('assets/img/mine.png') no-repeat center center;
+  background: url('../img/mine.png') no-repeat center center;
   background-size: contain;
 }
 
 .cell.flag {
-  background: url('assets/img/flag.png') no-repeat center center;
+  background: url('../img/flag.png') no-repeat center center;
   background-size: contain;
 }
 
 .cell.mine-exploded {
-  background: url('assets/img/mine-collision.png') no-repeat center center;
+  background: url('../img/mine-collision.png') no-repeat center center;
   background-size: contain;
 }
