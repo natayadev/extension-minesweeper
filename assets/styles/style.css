@@ -1,12 +1,21 @@
-@font-face {
-  font-family: 'Digital-7 Mono';
-  src: url('assets/fonts/digital-7-mono.ttf') format('truetype');
+:root {
+  --color-bg: #c0c0c0;
+  --color-bg-light: #f0f0f0;
+  --color-border: #808080;
+  --color-header: #c0c0c0;
+  --color-text: black;
+  --color-text-alt: red;
+  --color-pink-bg: #f8c1d5;
+  --color-pink-text: #ff69b4;
+  --font-family-default: 'Press Start 2P', monospace;
 }
 
 body {
-  font-family: 'Press Start 2P', monospace;  margin: 0;
+  font-family: var(--font-family-default);
+  margin: 0;
   padding: 0;
-  background-color: #c0c0c0;
+  background-color: var(--color-bg);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #game-container {
@@ -14,10 +23,11 @@ body {
   flex-direction: column;
   align-items: center;
   width: 180px;
-  border: 2px solid #808080;
-  background-color: #c0c0c0;
-  box-shadow: 2px 2px #ffffff, -2px -2px #808080;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg);
+  box-shadow: 2px 2px white, -2px -2px var(--color-border);
   padding: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 #header {
@@ -25,8 +35,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  border-bottom: 2px solid #808080;
-  background-color: #c0c0c0;
+  border-bottom: 2px solid var(--color-border);
+  background-color: var(--color-header);
   font-size: 16px;
 }
 
@@ -58,8 +68,8 @@ body {
 
 #mines-count, #timer {
   font-size: 18px;
-  background-color: black;
-  color: red;
+  background-color: var(--color-text);
+  color: var(--color-text-alt);
   padding: 5px 10px;
   border: 2px inset gray;
   border-radius: 3px;
@@ -70,18 +80,19 @@ body {
 .cell {
   width: 20px;
   height: 20px;
-  border: 1px solid #808080;
-  background-color: #c0c0c0;
-  box-shadow: inset 2px 2px #ffffff, inset -2px -2px #808080;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  box-shadow: inset 2px 2px white, inset -2px -2px var(--color-border);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .cell.empty {
-  background-color: #f0f0f0; 
-  border: 2px solid #808080;
+  background-color: var(--color-bg-light);
+  border: 2px solid var(--color-border);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -98,4 +109,25 @@ body {
 .cell.mine-exploded {
   background: url('../img/mine-collision.png') no-repeat center center;
   background-size: contain;
+}
+
+.pink-mode #game-container,
+.pink-mode #header,
+.pink-mode .cell,
+.pink-mode .cell.empty {
+  background-color: var(--color-pink-bg);
+}
+
+.pink-mode .cell {
+  border-color: var(--color-pink-text);
+}
+
+.pink-mode #mines-count,
+.pink-mode #timer {
+  color: white;
+  background-color: var(--color-pink-text);
+}
+
+.pink-mode .cell.empty {
+  box-shadow: inset 0 0 10px white;
 }
