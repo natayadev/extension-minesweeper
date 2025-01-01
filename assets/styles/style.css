@@ -57,14 +57,7 @@ body {
 }
 
 #restart:hover {
-  width: 26px;
-  height: 26px;
-  border: none;
   background: url('../img/hushed.png') no-repeat center center;
-  background-size: contain;
-  cursor: pointer;
-  margin-left: 2px;
-  margin-right: 2px;
 }
 
 #restart.win {
