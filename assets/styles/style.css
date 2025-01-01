@@ -49,7 +49,18 @@ body {
   width: 26px;
   height: 26px;
   border: none;
-  background: url('assets/img/smile.png') no-repeat center center;
+  background: url('../img/smile.png') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#restart:hover {
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: url('../img/hushed.png') no-repeat center center;
   background-size: contain;
   cursor: pointer;
   margin-left: 2px;
@@ -57,12 +68,12 @@ body {
 }
 
 #restart.win {
-  background: url('assets/img/win.png') no-repeat center center;
+  background: url('../img/win.png') no-repeat center center;
   background-size: contain;
 }
 
 #restart.lose {
-  background: url('assets/img/lose.png') no-repeat center center;
+  background: url('../img/lose.png') no-repeat center center;
   background-size: contain;
 }
 
